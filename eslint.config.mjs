@@ -1,6 +1,6 @@
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
+import withNuxt from "./.nuxt/eslint.config.mjs";
+import recommendedConfig from "eslint-plugin-prettier/recommended";
 
-export default withNuxt(
-  // Your custom configs here
-)
+// Your custom configs here
+export default withNuxt([recommendedConfig]);
