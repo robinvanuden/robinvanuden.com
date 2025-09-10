@@ -11,13 +11,6 @@ const url = computed(() => runtime.public.url);
 
 useHead({
   titleTemplate: (title) => [title, name.value].filter((s) => s).join(" | "),
-  link: [
-    {
-      rel: "icon",
-      type: "image/x-icon",
-      href: "/favicon.ico",
-    },
-  ],
 });
 
 useSeoMeta({
@@ -26,7 +19,6 @@ useSeoMeta({
   ogUrl: () => url.value,
   ogSiteName: () => name.value,
   ogImage: () => ({
-    secureUrl: "https://www.robinvanuden.com/robin.jpeg",
     url: "/robin.jpeg",
     alt: name.value,
     type: "image/jpeg",
