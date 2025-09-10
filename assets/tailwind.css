@@ -2,7 +2,7 @@
 
 @theme {
 
-    --font-display: "Poppins", sans-serif;
+    --font-display: "Jost", sans-serif;
 
     --color-sand: #f5ecdc;
     --color-walnut: #BFAC8A;
@@ -16,7 +16,7 @@
 
 @layer base {
     html {
-        @apply font-display font-normal;
+        @apply font-display font-normal text-[17px];
     }
 
     body {

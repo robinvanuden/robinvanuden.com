@@ -4,9 +4,13 @@
   </NuxtLayout>
 </template>
 <script lang="ts" setup>
+const runtime = useRuntimeConfig();
+
+const name = computed(() => runtime.public.name);
+const url = computed(() => runtime.public.url);
+
 useHead({
-  titleTemplate: (title) =>
-    [title, "Robin van Uden"].filter((s) => s).join(" | "),
+  titleTemplate: (title) => [title, name.value].filter((s) => s).join(" | "),
   link: [
     {
       rel: "icon",
@@ -19,12 +23,12 @@ useHead({
 useSeoMeta({
   description: "Fullstack Webdeveloper",
   ogDescription: "Fullstack Webdeveloper",
-  ogUrl: "https://www.robinvanuden.com",
-  ogSiteName: "Robin van Uden",
+  ogUrl: () => url.value,
+  ogSiteName: () => name.value,
   ogImage: () => ({
     secureUrl: "https://www.robinvanuden.com/robin.jpeg",
     url: "/robin.jpeg",
-    alt: "Robin van Uden",
+    alt: name.value,
     type: "image/jpeg",
     width: 720,
     height: 720,

@@ -1,5 +1,4 @@
-const url = process.env.NUXT_PUBLIC_SITE_URL;
-const name = process.env.NUXT_PUBLIC_SITE_NAME;
+import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -11,29 +10,31 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/fonts",
     "@nuxt/image",
-    "@nuxtjs/tailwindcss",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
   ],
   site: {
     indexable: true,
-    url,
-    name,
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+    name: process.env.NUXT_PUBLIC_SITE_NAME,
   },
   runtimeConfig: {
     public: {
-      url,
-      name,
+      url: process.env.NUXT_PUBLIC_SITE_URL,
+      name: process.env.NUXT_PUBLIC_SITE_NAME,
     },
   },
   css: ["~/assets/tailwind.css"],
   fonts: {
     families: [
       {
-        name: "Poppins",
+        name: "Jost",
         styles: ["normal", "italic"],
       },
     ],
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
   typescript: {
     strict: true,
