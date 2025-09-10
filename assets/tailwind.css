@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+
+    --font-display: "Poppins", sans-serif;
+
+    --color-sand: #f5ecdc;
+    --color-walnut: #BFAC8A;
+    --color-walnut-dark: #6C614D;
+    --color-walnut-darkest: #191510;
+
+    --color-sage: #6e8b71;
+    --color-sage-dark: #405142;
+    --color-sage-darkest: #121713;
+}
+
+@layer base {
+    html {
+        @apply font-display font-normal;
+    }
+
+    body {
+        @apply bg-sand text-black;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-display font-bold;
+    }
+}
+
+@layer components {
+    .block {
+        @apply flex justify-center items-center;
+    }
+
+    .block.big {
+        width: 50%;
+        height: 50vw;
+        @apply bg-blue-400;
+    }
+
+    .block.big-wide {
+        width: 100%;
+        height: 50vw;
+        @apply bg-red-500
+    }
+
+    .block.small {
+        width: 50%;
+        height: 25vw;
+        @apply bg-emerald-400
+    }
+
+    .block.wide {
+        width: 50%;
+        height: 25vw;
+        @apply bg-amber-400
+    }
+}
