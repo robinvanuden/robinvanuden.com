@@ -29,6 +29,11 @@
 }
 
 @layer components {
+
+    .container-full {
+        @apply xl:max-w-8/10 max-w-9/10 w-full mx-auto;
+    }
+
     .block {
         @apply flex justify-center items-center;
     }
