@@ -2,9 +2,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-05-15",
-  devtools: { enabled: true },
-  ssr: true,
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
@@ -12,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    "@nuxtjs/i18n",
   ],
   site: {
     indexable: true,
@@ -29,7 +27,26 @@ export default defineNuxtConfig({
     families: [
       {
         name: "Jost",
+        weights: [400, 500, 600, 700],
         styles: ["normal", "italic"],
+      },
+    ],
+  },
+  i18n: {
+    defaultLocale: "nl",
+    strategy: "prefix",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "rvu-locale",
+      alwaysRedirect: true,
+      fallbackLocale: "nl",
+    },
+    locales: [
+      {
+        code: "nl",
+        iso: "nl-NL",
+        name: "Nederlands",
+        file: "nl.json",
       },
     ],
   },
@@ -44,6 +61,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  compatibilityDate: "2025-05-15",
+  devtools: { enabled: true },
+  ssr: true,
   vite: {
     plugins: [tailwindcss()],
   },

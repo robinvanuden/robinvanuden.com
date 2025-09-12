@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full rounded-xl bg-walnut-darkest text-sand p-3">
+  <div class="w-full bg-walnut-darkest text-sand box">
     <div class="nav-container flex flex-row justify-between items-center">
       <nav>
         <ul class="flex flex-row gap-4">
-          <NavBarLink title="Home" to="/" />
-          <NavBarLink title="About Me" to="/about" />
+          <NavBarLink :title="t('index.title')" to="/" />
+          <NavBarLink :title="t('about.title')" to="/about" />
         </ul>
       </nav>
       <div id="branding">
@@ -17,12 +17,16 @@
       </div>
       <nav>
         <ul class="flex flex-row gap-4">
-          <NavBarLink title="My Work" to="/work" />
-          <NavBarLink title="Contact" to="/contact" />
+          <NavBarLink :title="t('work.title')" to="/work" />
+          <NavBarLink :title="t('contact.title')" to="/contact" />
         </ul>
       </nav>
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from "#imports";
+
+const { t } = useI18n();
+</script>
 <style scoped></style>

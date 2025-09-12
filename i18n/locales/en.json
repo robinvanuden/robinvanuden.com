@@ -1,0 +1,15 @@
+{
+  "soon": "More coming soon...",
+  "index": {
+    "title": "Welcome"
+  },
+  "about": {
+    "title": "About me"
+  },
+  "work": {
+    "title": "My Work"
+  },
+  "contact": {
+    "title": "Contact"
+  }
+}
