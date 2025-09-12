@@ -4,7 +4,7 @@
       <nav>
         <ul class="flex flex-row gap-4">
           <NavBarLink title="Home" to="/" />
-          <NavBarLink title="About me" to="/about" />
+          <NavBarLink title="About Me" to="/about" />
         </ul>
       </nav>
       <div id="branding">
@@ -17,7 +17,7 @@
       </div>
       <nav>
         <ul class="flex flex-row gap-4">
-          <NavBarLink title="My work" to="/work" />
+          <NavBarLink title="My Work" to="/work" />
           <NavBarLink title="Contact" to="/contact" />
         </ul>
       </nav>
