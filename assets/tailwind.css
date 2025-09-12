@@ -38,31 +38,7 @@
         @apply xl:max-w-8/10 max-w-9/10 w-full mx-auto;
     }
 
-    .block {
-        @apply flex justify-center items-center;
-    }
-
-    .block.big {
-        width: 50%;
-        height: 50vw;
-        @apply bg-blue-400;
-    }
-
-    .block.big-wide {
-        width: 100%;
-        height: 50vw;
-        @apply bg-red-500
-    }
-
-    .block.small {
-        width: 50%;
-        height: 25vw;
-        @apply bg-emerald-400
-    }
-
-    .block.wide {
-        width: 50%;
-        height: 25vw;
-        @apply bg-amber-400
+    .box {
+        @apply rounded-xl p-3;
     }
 }

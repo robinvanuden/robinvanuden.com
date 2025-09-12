@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from "#imports";
+
+const { t } = useI18n();
+</script>
 
 <template>
-  <h1>About me</h1>
+  <ComingSoonBlock :title="t('about.title')" class="bg-walnut-dark text-sand" />
 </template>
 
 <style scoped></style>
