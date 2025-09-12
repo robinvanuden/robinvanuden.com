@@ -1,6 +1,6 @@
 <template>
-  <li class="text-walnut hover:text-sage font-medium tracking-wider">
-    <NuxtLink :to="localePath(to)" active-class="text-sage">
+  <li class="text-sand hover:text-walnut font-medium tracking-wider">
+    <NuxtLink :to="toPath" active-class="text-walnut">
       {{ title }}
     </NuxtLink>
   </li>
@@ -8,9 +8,11 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 
-defineProps({
+const props = defineProps({
   title: { type: String, required: true },
   to: { type: String, required: true },
 });
+
+const toPath = computed(() => localePath(props.to));
 </script>
 <style scoped></style>
