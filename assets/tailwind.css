@@ -34,6 +34,14 @@
 
 @layer components {
 
+    .nav-link {
+        @apply text-sand hover:text-walnut font-medium tracking-wider
+    }
+
+    .nav-link.router-link-exact-active {
+        @apply text-walnut
+    }
+
     .container-full {
         @apply xl:max-w-8/10 max-w-9/10 w-full mx-auto;
     }

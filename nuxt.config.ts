@@ -42,12 +42,8 @@ export default defineNuxtConfig({
       fallbackLocale: "nl",
     },
     locales: [
-      {
-        code: "nl",
-        iso: "nl-NL",
-        name: "Nederlands",
-        file: "nl.json",
-      },
+      { code: "en", name: "English", file: "en.json" },
+      { code: "nl", name: "Nederlands", file: "nl.json" },
     ],
   },
   app: {
