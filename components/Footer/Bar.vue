@@ -11,16 +11,44 @@
       </div>
       <div class="footer-socials"></div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-links">
+    <div class="footer-bottom flex gap-2">
+      <div class="footer-links w-1/4">
         <nav>
           <ul class="flex flex-col gap-1">
-            <NavBarLink :title="t('index.title')" to="/" />
-            <NavBarLink :title="t('about.title')" to="/about" />
-            <NavBarLink :title="t('work.title')" to="/work" />
-            <NavBarLink :title="t('contact.title')" to="/contact" />
+            <li>
+              <NuxtLink class="nav-link" :to="localePath('/')">
+                {{ t("index.title") }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink class="nav-link" :to="localePath('/about')">
+                {{ t("about.title") }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink class="nav-link" :to="localePath('/work')">
+                {{ t("work.title") }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink class="nav-link" :to="localePath('/contact')">
+                {{ t("contact.title") }}
+              </NuxtLink>
+            </li>
           </ul>
         </nav>
+      </div>
+      <div class="locale-links w-1/4">
+        <ul class="flex flex-col gap-1">
+          <li v-for="loc in locales" :key="loc.code">
+            <NuxtLink
+              class="nav-link uppercase"
+              :to="switchLocalePath(loc.code)"
+            >
+              {{ loc.code }}
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
@@ -28,6 +56,9 @@
 <script setup lang="ts">
 import { useI18n } from "#imports";
 
-const { t } = useI18n();
+const { t, locales } = useI18n();
+
+const localePath = useLocalePath();
+const switchLocalePath = useSwitchLocalePath();
 </script>
 <style scoped></style>
