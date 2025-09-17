@@ -108,7 +108,14 @@
   </footer>
 </template>
 <script setup lang="ts">
-import { useI18n } from "#imports";
+import {
+  computed,
+  useRuntimeConfig,
+  useI18n,
+  useLocalePath,
+  useSwitchLocalePath,
+} from "#imports";
+
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
