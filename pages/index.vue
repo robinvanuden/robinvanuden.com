@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="w-full flex flex-no-wrap flex-row gap-3">
+  <div id="home" class="w-full flex flex-no-wrap flex-row gap-2">
     <NuxtImg
       src="/robin.jpeg"
       alt="Robin van Uden"
