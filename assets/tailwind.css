@@ -34,12 +34,24 @@
 
 @layer components {
 
-    .nav-link {
-        @apply text-sand hover:text-walnut font-medium tracking-wider
+    .nav-link.nav-link-alt {
+        @apply text-sage
     }
 
-    .nav-link.router-link-exact-active {
-        @apply text-walnut
+    .nav-link {
+        @apply text-walnut hover:text-sand font-medium tracking-wider;
+
+        &.router-link-exact-active {
+            @apply text-sand;
+        }
+    }
+
+    .footer-social-link {
+        @apply bg-sand text-walnut-darkest rounded-full size-8 flex items-center justify-center;
+
+        &.footer-social-email {
+            @apply bg-sage text-sand w-auto px-3;
+        }
     }
 
     .container-full {
