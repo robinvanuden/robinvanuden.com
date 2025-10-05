@@ -30,6 +30,9 @@
     h1 {
         @apply text-3xl;
     }
+    p > a {
+        @apply underline hover:no-underline;
+    }
 }
 
 @layer components {
