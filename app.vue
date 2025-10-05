@@ -4,6 +4,8 @@
   </NuxtLayout>
 </template>
 <script lang="ts" setup>
+import { computed, useRuntimeConfig, useHead, useSeoMeta } from "#imports";
+
 const runtime = useRuntimeConfig();
 
 const name = computed(() => runtime.public.name);

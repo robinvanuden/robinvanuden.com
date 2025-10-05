@@ -34,6 +34,14 @@
 
 @layer components {
 
+    .box {
+        @apply rounded-xl p-3;
+    }
+
+    .container-full {
+        @apply xl:max-w-8/10 max-w-9/10 w-full mx-auto;
+    }
+
     .nav-link.nav-link-alt {
         @apply text-sage
     }
@@ -47,18 +55,10 @@
     }
 
     .footer-social-link {
-        @apply bg-sand text-walnut-darkest rounded-full size-8 flex items-center justify-center;
+        @apply bg-sand text-walnut-darkest rounded-lg size-8 flex items-center justify-center;
 
         &.footer-social-email {
-            @apply bg-sage text-sand w-auto px-3;
+            @apply bg-sage text-sand hover:bg-sage-dark w-auto px-3;
         }
-    }
-
-    .container-full {
-        @apply xl:max-w-8/10 max-w-9/10 w-full mx-auto;
-    }
-
-    .box {
-        @apply rounded-xl p-3;
     }
 }

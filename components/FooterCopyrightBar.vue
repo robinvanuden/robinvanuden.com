@@ -1,8 +1,8 @@
 <template>
-  <footer class="copyright box bg-sage-dark text-sand/50">
+  <footer class="copyright box bg-walnut-darkest text-walnut">
     <p>
-      Copyright &copy; {{ year }} -
-      <NuxtLink :to="localePath('/')" class="text-sand">
+      <span>Copyright &copy; {{ year }}</span>
+      <NuxtLink :to="localePath('/')" class="text-sand ms-2">
         Robin van Uden
       </NuxtLink>
     </p>
