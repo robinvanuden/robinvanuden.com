@@ -9,9 +9,6 @@
     <div class="py-2">
       <FooterBar />
     </div>
-    <div class="pb-2">
-      <FooterCopyrightBar />
-    </div>
   </div>
 </template>
 <script setup lang="ts"></script>

@@ -105,6 +105,14 @@
         </ul>
       </div>
     </div>
+    <div class="copyright-bar w-full mt-10">
+      <p>
+        <span>Copyright &copy; {{ year }}</span>
+        <NuxtLink :to="localePath('/')" class="text-sand ms-2">
+          Robin van Uden
+        </NuxtLink>
+      </p>
+    </div>
   </footer>
 </template>
 <script setup lang="ts">
@@ -114,7 +122,8 @@ import {
   useI18n,
   useLocalePath,
   useSwitchLocalePath,
-} from "#imports";
+  ref,
+  onMounted } from "#imports";
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
@@ -135,5 +144,11 @@ const urlInstagram = computed(() => runtime?.public?.socials?.instagram);
 const urlLinkedin = computed(() => runtime?.public?.socials?.linkedin);
 const urlLetterboxd = computed(() => runtime?.public?.socials?.letterboxd);
 const urlPinterest = computed(() => runtime?.public?.socials?.pinterest);
+
+const year = ref(new Date().getFullYear());
+
+onMounted(() => {
+  year.value = new Date().getFullYear();
+});
 </script>
 <style scoped></style>
