@@ -1,14 +1,10 @@
 <template>
-  <div class="w-full bg-walnut-dark box">
+  <div class="w-full bg-walnut-darkest box">
     <div class="nav-container flex flex-row justify-between items-center">
       <nav>
         <ul class="flex flex-row gap-4">
-          <NuxtLinkLocale class="nav-link" to="/">
-            {{ t("index.title") }}
-          </NuxtLinkLocale>
-          <NuxtLinkLocale class="nav-link" to="/about">
-            {{ t("about.title") }}
-          </NuxtLinkLocale>
+          <NuxtLink class="nav-link" to="/"> Welkom </NuxtLink>
+          <NuxtLink class="nav-link" to="/about"> Over mij </NuxtLink>
         </ul>
       </nav>
       <div id="branding">
@@ -21,20 +17,12 @@
       </div>
       <nav>
         <ul class="flex flex-row gap-4">
-          <NuxtLinkLocale class="nav-link" to="/work">
-            {{ t("work.title") }}
-          </NuxtLinkLocale>
-          <NuxtLinkLocale class="nav-link" to="/contact">
-            {{ t("contact.title") }}
-          </NuxtLinkLocale>
+          <NuxtLink class="nav-link" to="/work"> Projecten </NuxtLink>
+          <NuxtLink class="nav-link" to="/contact"> Contact </NuxtLink>
         </ul>
       </nav>
     </div>
   </div>
 </template>
-<script setup lang="ts">
-import { useI18n } from "#imports";
-
-const { t } = useI18n();
-</script>
+<script setup lang="ts"></script>
 <style scoped></style>

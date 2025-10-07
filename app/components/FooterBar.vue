@@ -2,14 +2,14 @@
   <footer class="w-full bg-sage-darkest text-sand box">
     <div class="footer-top flex flex-row justify-between items-center mb-3">
       <div class="footer-branding">
-        <NuxtLinkLocale to="/">
+        <NuxtLink to="/">
           <img
             src="/logo.png"
             alt="Robin van Uden Logo"
             height="60"
             class="h-8"
           />
-        </NuxtLinkLocale>
+        </NuxtLink>
       </div>
       <div class="footer-socials flex gap-2">
         <a
@@ -66,73 +66,43 @@
         <nav>
           <ul class="flex flex-col gap-1">
             <li>
-              <NuxtLinkLocale class="nav-link nav-link-alt" to="/">
-                {{ t("index.title") }}
-              </NuxtLinkLocale>
+              <NuxtLink class="nav-link nav-link-alt" to="/"> Welkom </NuxtLink>
             </li>
             <li>
-              <NuxtLinkLocale
-                class="nav-link nav-link-alt"
-                to="/about"
-              >
-                {{ t("about.title") }}
-              </NuxtLinkLocale>
+              <NuxtLink class="nav-link nav-link-alt" to="/about">
+                Over mij
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLinkLocale class="nav-link nav-link-alt" to="/work">
-                {{ t("work.title") }}
-              </NuxtLinkLocale>
+              <NuxtLink class="nav-link nav-link-alt" to="/work">
+                Projecten
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLinkLocale
-                class="nav-link nav-link-alt"
-                to="/contact"
-              >
-                {{ t("contact.title") }}
-              </NuxtLinkLocale>
+              <NuxtLink class="nav-link nav-link-alt" to="/contact">
+                Contact
+              </NuxtLink>
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="locale-links w-1/4">
-        <ul class="flex flex-col gap-1">
-          <li v-for="loc in locales" :key="loc.code">
-            <SwitchLocalePathLink
-              class="nav-link nav-link-alt uppercase"
-              :locale="loc.code"
-            >
-              {{ loc.code }}
-            </SwitchLocalePathLink>
-          </li>
-        </ul>
       </div>
     </div>
     <div class="copyright-bar w-full mt-6">
       <p>
         <span>Copyright &copy; {{ year }}</span>
-        <NuxtLinkLocale to="/" class="text-sand ms-2"
-          >Robin van Uden</NuxtLinkLocale
-        >
+        <NuxtLink to="/" class="text-sand ms-2">Robin van Uden</NuxtLink>
       </p>
     </div>
   </footer>
 </template>
 <script setup lang="ts">
-import {
-  computed,
-  useRuntimeConfig,
-  useI18n,
-  ref,
-  onMounted,
-} from "#imports";
+import { computed, useRuntimeConfig, ref, onMounted } from "#imports";
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import { faLetterboxd } from "@fortawesome/free-brands-svg-icons/faLetterboxd";
 import { faPinterest } from "@fortawesome/free-brands-svg-icons/faPinterest";
-
-const { t, locales } = useI18n();
 
 const runtime = useRuntimeConfig();
 

@@ -1,14 +1,10 @@
 <template>
   <div class="w-full min-h-120 box flex flex-col justify-center items-center">
     <h1 class="font-bold">{{ title }}</h1>
-    <p>{{ t("soon") }}</p>
+    <p>Binnenkort meer...</p>
   </div>
 </template>
 <script setup lang="ts">
-import { useI18n } from "#imports";
-
 defineProps<{ title: string }>();
-
-const { t } = useI18n();
 </script>
 <style scoped></style>

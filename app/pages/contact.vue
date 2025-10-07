@@ -1,12 +1,5 @@
 <template>
-  <ComingSoonBlock
-    :title="t('contact.title')"
-    class="bg-walnut text-walnut-darkest"
-  />
+  <ComingSoonBlock title="Contact" class="bg-walnut text-walnut-darkest" />
 </template>
-<script setup lang="ts">
-import { useI18n } from "#imports";
-
-const { t } = useI18n();
-</script>
+<script setup lang="ts"></script>
 <style scoped></style>

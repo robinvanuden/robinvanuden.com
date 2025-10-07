@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
-    "@nuxtjs/i18n",
   ],
   site: {
     indexable: true,
@@ -42,29 +41,6 @@ export default defineNuxtConfig({
         styles: ["normal", "italic"],
       },
     ],
-  },
-  i18n: {
-    defaultLocale: "nl",
-    strategy: "no_prefix",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "rvu-locale",
-      alwaysRedirect: true,
-      fallbackLocale: "nl",
-    },
-    locales: [
-      { code: "nl", name: "Nederlands", file: "nl.json" },
-    ],
-    pages: {
-      about: {
-        en: "/about",
-        nl: "/over-mij",
-      },
-      projects: {
-        en: "/projects",
-        nl: "/projecten",
-      }
-    }
   },
   app: {
     head: {
