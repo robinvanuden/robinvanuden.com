@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-walnut-darkest text-sand box">
+  <div class="w-full bg-walnut-dark box">
     <div class="nav-container flex flex-row justify-between items-center">
       <nav>
         <ul class="flex flex-row gap-4">

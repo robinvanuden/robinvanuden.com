@@ -71,11 +71,6 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   ssr: true,
-  vite: {
-    plugins: [tailwindcss()],
-  },
-  typescript: {
-    strict: true,
-    typeCheck: true,
-  },
+  vite: { plugins: [tailwindcss()] },
+  typescript: { strict: true, typeCheck: true },
 });

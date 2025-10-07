@@ -5,8 +5,11 @@
     --font-display: "Jost", sans-serif;
 
     --color-sand: #f5ecdc;
+    --color-gold: #DEBE51;
+
+    --color-walnut-light: #f6dbb1;
     --color-walnut: #BFAC8A;
-    --color-walnut-dark: #6C614D;
+    --color-walnut-dark: #413828;
     --color-walnut-darkest: #191510;
 
     --color-sage-light: #b6d1b8;
@@ -46,15 +49,18 @@
         @apply xl:max-w-8/10 max-w-9/10 w-full mx-auto;
     }
 
-    .nav-link.nav-link-alt {
-        @apply text-sage
-    }
-
     .nav-link {
         @apply text-walnut hover:text-sand font-medium tracking-wider;
 
         &.router-link-exact-active {
             @apply text-sand;
+        }
+        &.nav-link-alt {
+            @apply text-sage-dark;
+
+            &.router-link-exact-active {
+                @apply text-sage;
+            }
         }
     }
 

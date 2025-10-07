@@ -25,7 +25,7 @@
           target="_blank"
           class="footer-social-link"
         >
-          <FaIcon :icon="faGithub" />
+          <FaIcon :icon="faGithub" size="lg" />
         </a>
         <a
           v-if="urlInstagram"
@@ -33,7 +33,7 @@
           target="_blank"
           class="footer-social-link"
         >
-          <FaIcon :icon="faInstagram" />
+          <FaIcon :icon="faInstagram" size="lg" />
         </a>
         <a
           v-if="urlLinkedin"
@@ -41,7 +41,7 @@
           target="_blank"
           class="footer-social-link"
         >
-          <FaIcon :icon="faLinkedin" />
+          <FaIcon :icon="faLinkedin" size="lg" />
         </a>
         <a
           v-if="urlLetterboxd"
@@ -49,7 +49,7 @@
           target="_blank"
           class="footer-social-link"
         >
-          <FaIcon :icon="faLetterboxd" />
+          <FaIcon :icon="faLetterboxd" size="lg" />
         </a>
         <a
           v-if="urlPinterest"
@@ -57,7 +57,7 @@
           target="_blank"
           class="footer-social-link"
         >
-          <FaIcon :icon="faPinterest" />
+          <FaIcon :icon="faPinterest" size="lg" />
         </a>
       </div>
     </div>
@@ -107,7 +107,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright-bar w-full mt-10">
+    <div class="copyright-bar w-full mt-6">
       <p>
         <span>Copyright &copy; {{ year }}</span>
         <NuxtLinkLocale to="/" class="text-sand ms-2"
