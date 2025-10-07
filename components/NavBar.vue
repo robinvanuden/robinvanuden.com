@@ -3,12 +3,12 @@
     <div class="nav-container flex flex-row justify-between items-center">
       <nav>
         <ul class="flex flex-row gap-4">
-          <NuxtLink class="nav-link" :to="localePath('/')">
+          <NuxtLinkLocale class="nav-link" to="/">
             {{ t("index.title") }}
-          </NuxtLink>
-          <NuxtLink class="nav-link" :to="localePath('/about')">
+          </NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link" to="/about">
             {{ t("about.title") }}
-          </NuxtLink>
+          </NuxtLinkLocale>
         </ul>
       </nav>
       <div id="branding">
@@ -21,22 +21,20 @@
       </div>
       <nav>
         <ul class="flex flex-row gap-4">
-          <NuxtLink class="nav-link" :to="localePath('/work')">
+          <NuxtLinkLocale class="nav-link" to="/work">
             {{ t("work.title") }}
-          </NuxtLink>
-          <NuxtLink class="nav-link" :to="localePath('/contact')">
+          </NuxtLinkLocale>
+          <NuxtLinkLocale class="nav-link" to="/contact">
             {{ t("contact.title") }}
-          </NuxtLink>
+          </NuxtLinkLocale>
         </ul>
       </nav>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { useI18n, useLocalePath } from "#imports";
+import { useI18n } from "#imports";
 
 const { t } = useI18n();
-
-const localePath = useLocalePath();
 </script>
 <style scoped></style>

@@ -2,12 +2,14 @@
   <footer class="w-full bg-sage-darkest text-sand box">
     <div class="footer-top flex flex-row justify-between items-center mb-3">
       <div class="footer-branding">
-        <img
-          src="/logo.png"
-          alt="Robin van Uden Logo"
-          height="30"
-          class="h-6"
-        />
+        <NuxtLinkLocale to="/">
+          <img
+            src="/logo.png"
+            alt="Robin van Uden Logo"
+            height="60"
+            class="h-8"
+          />
+        </NuxtLinkLocale>
       </div>
       <div class="footer-socials flex gap-2">
         <a
@@ -59,7 +61,7 @@
         </a>
       </div>
     </div>
-    <div class="footer-bottom flex gap-2">
+    <div class="footer-bottom flex gap-2 mt-6">
       <div class="footer-links w-1/4">
         <nav>
           <ul class="flex flex-col gap-1">
@@ -95,12 +97,12 @@
       <div class="locale-links w-1/4">
         <ul class="flex flex-col gap-1">
           <li v-for="loc in locales" :key="loc.code">
-            <NuxtLink
+            <SwitchLocalePathLink
               class="nav-link nav-link-alt uppercase"
-              :to="switchLocalePath(loc.code)"
+              :locale="loc.code"
             >
               {{ loc.code }}
-            </NuxtLink>
+            </SwitchLocalePathLink>
           </li>
         </ul>
       </div>
@@ -108,9 +110,9 @@
     <div class="copyright-bar w-full mt-10">
       <p>
         <span>Copyright &copy; {{ year }}</span>
-        <NuxtLink :to="localePath('/')" class="text-sand ms-2">
-          Robin van Uden
-        </NuxtLink>
+        <NuxtLinkLocale to="/" class="text-sand ms-2"
+          >Robin van Uden</NuxtLinkLocale
+        >
       </p>
     </div>
   </footer>
@@ -123,7 +125,8 @@ import {
   useLocalePath,
   useSwitchLocalePath,
   ref,
-  onMounted } from "#imports";
+  onMounted,
+} from "#imports";
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";

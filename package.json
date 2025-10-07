@@ -24,16 +24,14 @@
     "@nuxt/eslint": "^1.9.0",
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.11.0",
-    "@nuxtjs/i18n": "^10.1.0",
+    "@nuxtjs/i18n": "^9.5.6",
     "@nuxtjs/robots": "^5.5.5",
     "@nuxtjs/sitemap": "^7.4.7",
     "@tailwindcss/vite": "^4.1.14",
     "better-sqlite3": "^12.4.1",
     "eslint": "^9.37.0",
     "nuxt": "^4.1.2",
-    "tailwindcss": "^4.1.14",
-    "vue": "^3.5.22",
-    "vue-router": "^4.5.1"
+    "tailwindcss": "^4.1.14"
   },
   "devDependencies": {
     "@types/node": "^24.6.2",
