@@ -66,30 +66,30 @@
         <nav>
           <ul class="flex flex-col gap-1">
             <li>
-              <NuxtLink class="nav-link nav-link-alt" :to="localePath('/')">
+              <NuxtLinkLocale class="nav-link nav-link-alt" to="/">
                 {{ t("index.title") }}
-              </NuxtLink>
+              </NuxtLinkLocale>
             </li>
             <li>
-              <NuxtLink
+              <NuxtLinkLocale
                 class="nav-link nav-link-alt"
-                :to="localePath('/about')"
+                to="/about"
               >
                 {{ t("about.title") }}
-              </NuxtLink>
+              </NuxtLinkLocale>
             </li>
             <li>
-              <NuxtLink class="nav-link nav-link-alt" :to="localePath('/work')">
+              <NuxtLinkLocale class="nav-link nav-link-alt" to="/work">
                 {{ t("work.title") }}
-              </NuxtLink>
+              </NuxtLinkLocale>
             </li>
             <li>
-              <NuxtLink
+              <NuxtLinkLocale
                 class="nav-link nav-link-alt"
-                :to="localePath('/contact')"
+                to="/contact"
               >
                 {{ t("contact.title") }}
-              </NuxtLink>
+              </NuxtLinkLocale>
             </li>
           </ul>
         </nav>
@@ -122,8 +122,6 @@ import {
   computed,
   useRuntimeConfig,
   useI18n,
-  useLocalePath,
-  useSwitchLocalePath,
   ref,
   onMounted,
 } from "#imports";
@@ -135,9 +133,6 @@ import { faLetterboxd } from "@fortawesome/free-brands-svg-icons/faLetterboxd";
 import { faPinterest } from "@fortawesome/free-brands-svg-icons/faPinterest";
 
 const { t, locales } = useI18n();
-
-const localePath = useLocalePath();
-const switchLocalePath = useSwitchLocalePath();
 
 const runtime = useRuntimeConfig();
 

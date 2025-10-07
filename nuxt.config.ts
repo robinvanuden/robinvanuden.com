@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     defaultLocale: "nl",
-    strategy: "prefix",
+    strategy: "no_prefix",
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "rvu-locale",
@@ -53,9 +53,18 @@ export default defineNuxtConfig({
       fallbackLocale: "nl",
     },
     locales: [
-      { code: "en", name: "English", file: "en.json" },
       { code: "nl", name: "Nederlands", file: "nl.json" },
     ],
+    pages: {
+      about: {
+        en: "/about",
+        nl: "/over-mij",
+      },
+      projects: {
+        en: "/projects",
+        nl: "/projecten",
+      }
+    }
   },
   app: {
     head: {
