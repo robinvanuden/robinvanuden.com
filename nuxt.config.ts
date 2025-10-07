@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
-    "@nuxtjs/i18n",
   ],
   site: {
     indexable: true,
@@ -41,20 +40,6 @@ export default defineNuxtConfig({
         weights: [400, 500, 600, 700],
         styles: ["normal", "italic"],
       },
-    ],
-  },
-  i18n: {
-    defaultLocale: "nl",
-    strategy: "prefix",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "rvu-locale",
-      alwaysRedirect: true,
-      fallbackLocale: "nl",
-    },
-    locales: [
-      { code: "en", name: "English", file: "en.json" },
-      { code: "nl", name: "Nederlands", file: "nl.json" },
     ],
   },
   app: {
