@@ -1,15 +1,18 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <UApp>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </UApp>
 </template>
 <script lang="ts" setup>
 import { computed, useRuntimeConfig, useHead, useSeoMeta } from "#imports";
 
 const runtime = useRuntimeConfig();
 
-const name = computed(() => runtime.public.name);
-const url = computed(() => runtime.public.url);
+const name = computed(() => runtime.public?.site?.name);
+
+const img = useImage();
 
 useHead({
   titleTemplate: (title) => [title, name.value].filter((s) => s).join(" | "),
@@ -18,14 +21,16 @@ useHead({
 useSeoMeta({
   description: "Fullstack Webdeveloper",
   ogDescription: "Fullstack Webdeveloper",
-  ogUrl: () => url.value,
-  ogSiteName: () => name.value,
   ogImage: () => ({
-    url: "/robin.jpeg",
+    url: img("/robin.jpeg", {
+      width: 800,
+      height: 800,
+      fit: "cover",
+    }),
     alt: name.value,
     type: "image/jpeg",
-    width: 720,
-    height: 720,
+    width: 800,
+    height: 800,
   }),
 });
 </script>

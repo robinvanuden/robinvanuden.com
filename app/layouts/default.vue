@@ -1,15 +1,9 @@
 <template>
-  <div id="website" class="container-full mx-auto">
-    <div class="py-2">
-      <NavBar />
-    </div>
-    <div class="page-content">
+  <div>
+    <NavBar />
+    <UMain>
       <NuxtPage />
-    </div>
-    <div class="py-2">
       <FooterBar />
-    </div>
+    </UMain>
   </div>
 </template>
-<script setup lang="ts"></script>
-<style scoped></style>

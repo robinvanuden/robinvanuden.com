@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
 
-@theme {
-
-    --font-display: "Jost", sans-serif;
+@theme static {
+    --font-sans: "Outfit", sans-serif;
+    --font-serif: "Vollkorn", sans-serif;
 
     --color-sand: #f5ecdc;
     --color-gold: #DEBE51;
@@ -16,33 +17,55 @@
     --color-sage: #6e8b71;
     --color-sage-dark: #405142;
     --color-sage-darkest: #121713;
-}
 
-@layer base {
-    html {
-        @apply font-display font-normal text-[17px];
-    }
+    --color-walnut: #BFAC8A;
+    --color-walnut-50: #f9f7f3;
+    --color-walnut-100: #f0ede4;
+    --color-walnut-200: #e1dac7;
+    --color-walnut-300: #cdc1a4;
+    --color-walnut-400: #bfac8a;
+    --color-walnut-500: #aa8e65;
+    --color-walnut-600: #9d7d59;
+    --color-walnut-700: #83664b;
+    --color-walnut-800: #6b5441;
+    --color-walnut-900: #574537;
+    --color-walnut-950: #2e231c;
 
-    body {
-        @apply bg-sand text-black;
-    }
 
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-display font-bold;
-    }
 
-    h1 {
-        @apply text-3xl;
-    }
-    p > a {
-        @apply underline hover:no-underline;
-    }
+    --color-vanilla: #DEBE51;
+    --color-vanilla-50: #fcfaee;
+    --color-vanilla-100: #f6f0cf;
+    --color-vanilla-200: #ece09b;
+    --color-vanilla-300: #e2cb67;
+    --color-vanilla-400: #debe51;
+    --color-vanilla-500: #d39e2d;
+    --color-vanilla-600: #ba7d25;
+    --color-vanilla-700: #9b5c22;
+    --color-vanilla-800: #7f4a21;
+    --color-vanilla-900: #693d1e;
+    --color-vanilla-950: #3b1f0d;
+
+    --color-sage: #6e8b71;
+    --color-sage-50: #f3f6f3;
+    --color-sage-100: #e3e9e2;
+    --color-sage-200: #c6d4c7;
+    --color-sage-300: #a0b5a2;
+    --color-sage-400: #6e8b71;
+    --color-sage-500: #55745a;
+    --color-sage-600: #405b44;
+    --color-sage-700: #344838;
+    --color-sage-800: #2a3b2d;
+    --color-sage-900: #233126;
+    --color-sage-950: #131b15;
+
+
 }
 
 @layer components {
 
     .box {
-        @apply rounded-xl p-3;
+        @apply rounded-lg p-4;
     }
 
     .container-full {
