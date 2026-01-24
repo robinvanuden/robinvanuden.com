@@ -40,6 +40,7 @@ export default defineNuxtConfig({
         letterboxd: "",
         pinterest: "",
       },
+    },
   },
   fonts: {
     families: [

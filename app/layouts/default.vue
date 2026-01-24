@@ -1,9 +1,9 @@
 <template>
   <div>
-    <NavBar />
+    <AppNavigation />
     <UMain>
       <NuxtPage />
-      <FooterBar />
+      <AppFooter />
     </UMain>
   </div>
 </template>

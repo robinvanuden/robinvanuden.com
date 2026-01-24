@@ -1,5 +1,5 @@
 <template>
-  <UFooter class="border-t-default bg-elevated/50 border-t">
+  <UFooter class="bg-elevated/50">
     <template #top>
       <UContainer>
         <UFooterColumns :columns="columns">
@@ -12,9 +12,6 @@
     <template #left>
       <span class="text-dimmed">© {{ year }}</span>
       <NuxtLink to="/" class="text-sand ms-2">Robin van Uden</NuxtLink>
-    </template>
-    <template #right>
-      <UColorModeButton />
     </template>
   </UFooter>
 </template>
@@ -91,8 +88,6 @@ const columns = computed<FooterColumn[]>(() => [
 ]);
 
 const year = ref(new Date().getFullYear());
-
-const credits = computed(() => `© ${new Date().getFullYear()}`);
 
 onMounted(() => {
   year.value = new Date().getFullYear();

@@ -17,6 +17,7 @@
     "clean": "nuxt cleanup && nuxt prepare"
   },
   "dependencies": {
+    "@awesome.me/kit-8a86222217": "^1.0.2",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
     "@fortawesome/vue-fontawesome": "^3.1.3",
