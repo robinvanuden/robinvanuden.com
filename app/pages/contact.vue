@@ -1,5 +1,5 @@
 <template>
-  <ComingSoonBlock title="Contact" class="bg-walnut text-walnut-darkest" />
+  <ComingSoonBlock title="Contact" />
 </template>
 <script setup lang="ts"></script>
 <style scoped></style>
