@@ -1,26 +1,34 @@
 <template>
-  <div id="home" class="w-full flex flex-no-wrap flex-row gap-2">
-    <NuxtImg
-      src="/robin.jpeg"
-      alt="Robin van Uden"
-      quality="70"
-      width="500"
-      height="500"
-      densities="x1 x2"
-      loading="lazy"
-      class="box size-120 p-0"
-      preload
-    />
-    <div
-      v-if="page"
-      class="w-1/1 h-120 bg-sage box flex flex-col justify-center items-center"
-    >
-      <div class="block">
-        <ContentRenderer :value="page.body" :prose="false" />
-      </div>
-    </div>
-    <ComingSoonBlock v-else title="Home" class="bg-sage" />
-  </div>
+  <UPageHero
+    v-if="page"
+    :title="page.title"
+    :links="[
+      {
+        label: 'Projecten',
+        to: '/work',
+      },
+      {
+        label: 'hello@robinvanuden.com',
+        to: 'mailto:hello@robinvanuden.com',
+        color: 'neutral',
+      },
+    ]"
+  >
+    <template #description>
+      <ContentRenderer :value="page" :prose="false" />
+    </template>
+    <template #headline>
+      <NuxtImg
+        src="/robin.jpeg"
+        width="120"
+        height="120"
+        alt="Robin van Uden"
+        class="mx-auto rounded-full"
+        loading="lazy"
+        densities="x1 x2"
+      />
+    </template>
+  </UPageHero>
 </template>
 <script lang="ts" setup>
 import { withLeadingSlash } from "ufo";
@@ -32,4 +40,3 @@ const { data: page } = await useAsyncData("page-index", () =>
   queryCollection("content").path(slug.value).first(),
 );
 </script>
-<style scoped></style>
