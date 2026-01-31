@@ -64,6 +64,10 @@
 
 @layer components {
 
+    .iconify {
+        @apply mask-center mask-size-[80%_80%]
+    }
+
     .box {
         @apply rounded-lg p-4;
     }

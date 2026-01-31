@@ -1,3 +1,5 @@
+import { defineIcons } from "./icons/font-awesome";
+
 export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
@@ -50,6 +52,9 @@ export default defineNuxtConfig({
         styles: ["normal", "italic"],
       },
     ],
+  },
+  icon: {
+    customCollections: defineIcons(),
   },
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },

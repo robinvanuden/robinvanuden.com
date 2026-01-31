@@ -1,5 +1,5 @@
 <template>
-  <UFooter class="bg-elevated/50">
+  <UFooter class="bg-elevated">
     <template #top>
       <UContainer>
         <UFooterColumns :columns="columns">
@@ -11,7 +11,7 @@
     </template>
     <template #left>
       <span class="text-dimmed">© {{ year }}</span>
-      <NuxtLink to="/" class="text-sand ms-2">Robin van Uden</NuxtLink>
+      <NuxtLink to="/" class="text-muted ms-2">Robin van Uden</NuxtLink>
     </template>
   </UFooter>
 </template>
@@ -35,18 +35,22 @@ const columns = computed<FooterColumn[]>(() => [
     children: [
       {
         label: "Welkom",
+        icon: "far:home",
         to: "/",
       },
       {
         label: "Over mij",
+        icon: "far:user",
         to: "/about",
       },
       {
         label: "Projecten",
+        icon: "far:briefcase",
         to: "/work",
       },
       {
         label: "Contact",
+        icon: "far:messages",
         to: "/contact",
       },
     ],
@@ -56,22 +60,27 @@ const columns = computed<FooterColumn[]>(() => [
     children: [
       {
         label: "Github",
+        icon: "fab:github",
         to: urlGithub.value,
       },
       {
         label: "Instagram",
+        icon: "fab:instagram",
         to: urlInstagram.value,
       },
       {
         label: "Linkedin",
+        icon: "fab:linkedin",
         to: urlLinkedin.value,
       },
       {
         label: "Letterboxd",
+        icon: "fab:letterboxd",
         to: urlLetterboxd.value,
       },
       {
         label: "Pinterest",
+        icon: "fab:pinterest",
         to: urlPinterest.value,
       },
     ],
