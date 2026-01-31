@@ -62,6 +62,12 @@
 
 }
 
+@layer base {
+    html {
+        @apply text-[18px]
+    }
+}
+
 @layer components {
 
     .iconify {

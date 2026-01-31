@@ -16,6 +16,13 @@ const img = useImage();
 
 useHead({
   titleTemplate: (title) => [title, name.value].filter((s) => s).join(" | "),
+  link: [
+    {
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico",
+    },
+  ],
 });
 
 useSeoMeta({
