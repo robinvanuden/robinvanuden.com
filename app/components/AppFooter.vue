@@ -1,5 +1,5 @@
 <template>
-  <UFooter class="bg-elevated">
+  <UFooter class="bg-accented dark:bg-elevated">
     <template #top>
       <UContainer>
         <UFooterColumns :columns="columns">
@@ -10,14 +10,15 @@
       </UContainer>
     </template>
     <template #left>
-      <span class="text-dimmed">© {{ year }}</span>
-      <NuxtLink to="/" class="text-muted ms-2">Robin van Uden</NuxtLink>
+      <span class="inline-flex items-center gap-1"
+        >Gebouwd met <UIcon name="fas:stroopwafel" class="text-tertiary" /> &
+        <UIcon name="fas:heart" class="text-error" /> door
+        <NuxtLink to="/" class="text-muted">Robin</NuxtLink></span
+      >
     </template>
   </UFooter>
 </template>
 <script setup lang="ts">
-import { computed, useRuntimeConfig, ref, onMounted } from "#imports";
-
 import type { FooterColumn } from "@nuxt/ui";
 
 const runtime = useRuntimeConfig();
@@ -48,11 +49,6 @@ const columns = computed<FooterColumn[]>(() => [
         icon: "far:briefcase",
         to: "/work",
       },
-      {
-        label: "Contact",
-        icon: "far:messages",
-        to: "/contact",
-      },
     ],
   },
   {
@@ -62,26 +58,31 @@ const columns = computed<FooterColumn[]>(() => [
         label: "Github",
         icon: "fab:github",
         to: urlGithub.value,
+        target: "_blank",
       },
       {
         label: "Instagram",
         icon: "fab:instagram",
         to: urlInstagram.value,
+        target: "_blank",
       },
       {
         label: "Linkedin",
         icon: "fab:linkedin",
         to: urlLinkedin.value,
+        target: "_blank",
       },
       {
         label: "Letterboxd",
         icon: "fab:letterboxd",
         to: urlLetterboxd.value,
+        target: "_blank",
       },
       {
         label: "Pinterest",
         icon: "fab:pinterest",
         to: urlPinterest.value,
+        target: "_blank",
       },
     ],
   },
@@ -95,10 +96,4 @@ const columns = computed<FooterColumn[]>(() => [
     ],
   },
 ]);
-
-const year = ref(new Date().getFullYear());
-
-onMounted(() => {
-  year.value = new Date().getFullYear();
-});
 </script>
