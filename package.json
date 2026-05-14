@@ -18,25 +18,27 @@
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
-    "@fortawesome/pro-solid-svg-icons": "^7.2.0",
     "@fortawesome/pro-regular-svg-icons": "^7.2.0",
-    "@nuxt/content": "^3.12.0",
+    "@fortawesome/pro-solid-svg-icons": "^7.2.0",
+    "@iconify-json/lucide": "^1.2.107",
+    "@iconify-json/simple-icons": "^1.2.82",
+    "@nuxt/content": "^3.13.0",
     "@nuxt/image": "^2.0.0",
-    "@nuxt/ui": "^4.5.0",
-    "@nuxtjs/robots": "^5.7.0",
-    "@nuxtjs/sitemap": "^7.6.0",
-    "nuxt": "^4.3.1",
-    "tailwindcss": "^4.2.1"
+    "@nuxt/ui": "^4.7.1",
+    "@nuxtjs/robots": "^6.0.8",
+    "@nuxtjs/sitemap": "^8.0.15",
+    "nuxt": "^4.4.5",
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
-    "@iconify/tools": "^5.0.3",
+    "@iconify/tools": "^5.0.11",
     "@nuxt/eslint": "^1.15.2",
-    "@types/node": "^25.3.3",
-    "better-sqlite3": "^12.6.2",
+    "@types/node": "^25.7.0",
+    "better-sqlite3": "^12.10.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.5"
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.2.9"
   }
 }
