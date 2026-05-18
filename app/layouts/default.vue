@@ -3,7 +3,7 @@
     <AppNavigation />
     <UMain>
       <NuxtPage />
-      <AppFooter />
+      <AppFooter class="mt-4" />
     </UMain>
   </div>
 </template>

@@ -1,22 +1,27 @@
 <template>
-  <UContainer class="fixed top-2 right-0 left-0 z-10">
-    <div
-      class="bg-accented/50 dark:bg-accented/30 flex items-center justify-between rounded-xl px-2 backdrop-blur-xl"
-    >
+  <UHeader to="/" :ui="{ root: 'border-0' }">
+    <template #title>
       <AppLogo :height="20" class="ml-2" />
-      <div class="flex gap-1 md:gap-2">
-        <UNavigationMenu :items="items" variant="link" />
-        <UColorModeButton variant="link" />
-      </div>
-    </div>
-  </UContainer>
+    </template>
+    <UNavigationMenu :items="items" color="secondary" variant="link" />
+    <template #body>
+      <UNavigationMenu
+        :items="items"
+        color="secondary"
+        orientation="vertical"
+      />
+    </template>
+    <template #right>
+      <UColorModeButton color="neutral" variant="link" />
+    </template>
+  </UHeader>
 </template>
 <script lang="ts" setup>
 import type { NavigationMenuItem } from "@nuxt/ui";
 
 const items = computed<NavigationMenuItem[]>(() => [
   { to: "/", label: "Welkom" },
-  { to: "/about", label: "Over mij" },
   { to: "/work", label: "Projecten" },
+  { to: "/about", label: "Over mij" },
 ]);
 </script>
