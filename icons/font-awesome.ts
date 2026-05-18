@@ -1,19 +1,19 @@
 import { blankIconSet } from "@iconify/tools";
-import { far } from "@fortawesome/pro-regular-svg-icons";
 import { fas } from "@fortawesome/pro-solid-svg-icons";
+import { far } from "@fortawesome/pro-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
-import type { IconifyInfo, IconifyJSON } from "@iconify/types";
+import type { IconifyInfo } from "@iconify/types";
 
 // put the icons and the prefix you want them to have together in one object.
 const icons = [
-  { icons: far, prefix: "far" },
   { icons: fas, prefix: "fas" },
+  { icons: far, prefix: "far" },
   { icons: fab, prefix: "fab" },
 ];
 
 // set the base info
-const baseInfo = {
+const baseInfo: IconifyInfo = {
   name: "Font Awesome",
   author: {
     name: "Font Awesome",
@@ -23,10 +23,10 @@ const baseInfo = {
     url: "https://fontawesome.com/license",
   },
   height: 512,
-} as const satisfies IconifyInfo;
+};
 
 export function defineIcons() {
-  const collections: IconifyJSON[] = [];
+  const collections = [];
   // iterate through the icons and generate the json files
   for (const iconData of icons) {
     const iconSet = blankIconSet(iconData.prefix);
@@ -40,11 +40,7 @@ export function defineIcons() {
           ? `<path fill="currentColor" d="${svgPathData}" />`
           : `<g fill="currentColor">${svgPathData.map((x) => `<path d="${x}" />`).join("")}</g>`;
 
-      iconSet.setIcon(iconName, {
-        body,
-        height,
-        width,
-      });
+      iconSet.setIcon(iconName, { body, height, width });
 
       ligatures.forEach((x) => {
         // ignore the aliases that are numbers.

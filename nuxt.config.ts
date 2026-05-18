@@ -47,7 +47,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: "Jost",
+        name: "Baloo 2",
         weights: [400, 500, 600, 700],
         styles: ["normal", "italic"],
       },
@@ -55,6 +55,10 @@ export default defineNuxtConfig({
   },
   icon: {
     customCollections: defineIcons(),
+    provider: "server",
+    serverBundle: {
+      collections: ["fas", "far", "fab", "lucide", "simple-icons"],
+    },
   },
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
