@@ -2,106 +2,82 @@
 @import "@nuxt/ui";
 
 @theme static {
-    --font-sans: "Outfit", sans-serif;
-    --font-serif: "Vollkorn", sans-serif;
+    --font-sans: "Baloo 2", sans-serif;
 
-    --color-sand: #f5ecdc;
-    --color-gold: #DEBE51;
+    --color-old-gold-50: #fbf7ea;
+    --color-old-gold-100: #f7efd4;
+    --color-old-gold-200: #efdea9;
+    --color-old-gold-300: #e7ce7e;
+    --color-old-gold-400: #debe51;
+    --color-old-gold-500: #d6ae29;
+    --color-old-gold-600: #ab8b21;
+    --color-old-gold-700: #816818;
+    --color-old-gold-800: #564510;
+    --color-old-gold-900: #2b2308;
+    --color-old-gold-950: #1e1806;
 
-    --color-walnut-light: #f6dbb1;
-    --color-walnut: #BFAC8A;
-    --color-walnut-dark: #413828;
-    --color-walnut-darkest: #191510;
+    --color-dusty-olive-50: #f2f5f0;
+    --color-dusty-olive-100: #e5eae1;
+    --color-dusty-olive-200: #cad5c3;
+    --color-dusty-olive-300: #b0c0a5;
+    --color-dusty-olive-400: #95ab87;
+    --color-dusty-olive-500: #7b9669;
+    --color-dusty-olive-600: #627854;
+    --color-dusty-olive-700: #4a5a3f;
+    --color-dusty-olive-800: #313c2a;
+    --color-dusty-olive-900: #191e15;
+    --color-dusty-olive-950: #11150f;
 
-    --color-sage-light: #b6d1b8;
-    --color-sage: #6e8b71;
-    --color-sage-dark: #405142;
-    --color-sage-darkest: #121713;
+    --color-vintage-lavender-50: #f2f0f5;
+    --color-vintage-lavender-100: #e5e0eb;
+    --color-vintage-lavender-200: #cbc2d6;
+    --color-vintage-lavender-300: #b1a3c2;
+    --color-vintage-lavender-400: #9885ad;
+    --color-vintage-lavender-500: #7e6699;
+    --color-vintage-lavender-600: #65527a;
+    --color-vintage-lavender-700: #4b3d5c;
+    --color-vintage-lavender-800: #32293d;
+    --color-vintage-lavender-900: #19141f;
+    --color-vintage-lavender-950: #120e15;
 
-    --color-walnut: #BFAC8A;
-    --color-walnut-50: #f9f7f3;
-    --color-walnut-100: #f0ede4;
-    --color-walnut-200: #e1dac7;
-    --color-walnut-300: #cdc1a4;
-    --color-walnut-400: #bfac8a;
-    --color-walnut-500: #aa8e65;
-    --color-walnut-600: #9d7d59;
-    --color-walnut-700: #83664b;
-    --color-walnut-800: #6b5441;
-    --color-walnut-900: #574537;
-    --color-walnut-950: #2e231c;
+    --color-grey-olive-50: #f3f3f2;
+    --color-grey-olive-100: #e7e6e4;
+    --color-grey-olive-200: #cfcec9;
+    --color-grey-olive-300: #b6b5af;
+    --color-grey-olive-400: #9e9d94;
+    --color-grey-olive-500: #868479;
+    --color-grey-olive-600: #6b6a61;
+    --color-grey-olive-700: #504f49;
+    --color-grey-olive-800: #363530;
+    --color-grey-olive-900: #1b1a18;
+    --color-grey-olive-950: #131211;
+}
 
-
-
-    --color-vanilla: #DEBE51;
-    --color-vanilla-50: #fcfaee;
-    --color-vanilla-100: #f6f0cf;
-    --color-vanilla-200: #ece09b;
-    --color-vanilla-300: #e2cb67;
-    --color-vanilla-400: #debe51;
-    --color-vanilla-500: #d39e2d;
-    --color-vanilla-600: #ba7d25;
-    --color-vanilla-700: #9b5c22;
-    --color-vanilla-800: #7f4a21;
-    --color-vanilla-900: #693d1e;
-    --color-vanilla-950: #3b1f0d;
-
-    --color-sage: #6e8b71;
-    --color-sage-50: #f3f6f3;
-    --color-sage-100: #e3e9e2;
-    --color-sage-200: #c6d4c7;
-    --color-sage-300: #a0b5a2;
-    --color-sage-400: #6e8b71;
-    --color-sage-500: #55745a;
-    --color-sage-600: #405b44;
-    --color-sage-700: #344838;
-    --color-sage-800: #2a3b2d;
-    --color-sage-900: #233126;
-    --color-sage-950: #131b15;
-
-
+:root {
+    --ui-container: 65rem;
 }
 
 @layer base {
     html {
-        @apply text-[18px]
+        font-size: 17px
+    }
+
+    p b, p strong {
+        @apply text-toned;
+
+        a {
+            @apply text-primary underline;
+        }
     }
 }
 
 @layer components {
-
-    .iconify {
-        @apply mask-center mask-size-[80%_80%]
+    span[class^='iconify i-fas:'],
+    span[class^='iconify i-far:'] {
+        @apply mask-center mask-size-[86%_86%]
     }
 
     .box {
-        @apply rounded-lg p-4;
-    }
-
-    .container-full {
-        @apply xl:max-w-8/10 max-w-9/10 w-full mx-auto;
-    }
-
-    .nav-link {
-        @apply text-walnut hover:text-sand font-medium tracking-wider;
-
-        &.router-link-exact-active {
-            @apply text-sand;
-        }
-        &.nav-link-alt {
-            @apply text-sage-dark;
-
-            &.router-link-exact-active {
-                @apply text-sage;
-            }
-        }
-    }
-
-    .footer-social-link {
-        @apply bg-sand text-walnut-darkest rounded-lg size-8 flex items-center justify-center;
-
-        &.footer-social-email {
-            @apply bg-sage text-sand hover:bg-sage-dark w-auto px-3;
-        }
+        @apply bg-accented dark:bg-elevated rounded-lg p-4;
     }
 }

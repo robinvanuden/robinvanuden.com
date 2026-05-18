@@ -1,8 +1,16 @@
 <template>
   <UApp>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <UTheme
+      :ui="{
+        button: {
+          base: 'font-semibold rounded-xl',
+        },
+      }"
+    >
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UTheme>
   </UApp>
 </template>
 <script lang="ts" setup>

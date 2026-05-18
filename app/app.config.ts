@@ -1,10 +1,10 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "sage",
-      secondary: "vanilla",
-      tertiary: "walnut",
-      neutral: "stone",
+      primary: "dusty-olive",
+      secondary: "old-gold",
+      tertiary: "vintage-lavender",
+      neutral: "grey-olive",
     },
     icons: {
       arrowDown: "far:arrow-down",
@@ -37,7 +37,7 @@ export default defineAppConfig({
       light: "far:sun-bright",
       loading: "far:loader-circle",
       mail: "far:envelope",
-      menu: "far:menu",
+      menu: "far:bars",
       minus: "far:minus",
       panelClose: "far:panel-left-close",
       panelOpen: "far:panel-left-open",
