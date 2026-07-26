@@ -10,19 +10,27 @@
       <template #description>
         <ContentRenderer v-if="hero" :value="hero" :prose="false" />
       </template>
+      <BackgroundCubes />
     </UPageHero>
-    <UPageSection v-bind="intro" orientation="horizontal">
+    <UPageSection v-if="intro" v-bind="intro">
       <template #description>
         <ContentRenderer v-if="intro" :value="intro" :prose="false" />
       </template>
     </UPageSection>
-    <LanguagesMarquee />
+    <UPageSection v-if="skills" v-bind="skills">
+      <template #description>
+        <ContentRenderer v-if="skills" :value="skills" :prose="false" />
+      </template>
+      <LanguagesMarquee />
+    </UPageSection>
   </div>
 </template>
 <script lang="ts" setup>
 const { data: hero } = await useSection("/section/home/hero");
 
 const { data: intro } = await useSection("/section/home/intro");
+
+const { data: skills } = await useSection("/section/home/skills");
 
 const root = useRequestURL();
 

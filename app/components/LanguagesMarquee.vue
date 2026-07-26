@@ -1,19 +1,17 @@
 <template>
-  <UPageSection title="Vaardigheden">
-    <UMarquee pause-on-hover>
-      <UTooltip
-        v-for="language in languages"
-        :key="language.icon"
-        :text="language.title"
-      >
-        <UIcon
-          :name="language.icon"
-          class="text-secondary shrink-0"
-          :class="language.size"
-        />
-      </UTooltip>
-    </UMarquee>
-  </UPageSection>
+  <UMarquee pause-on-hover>
+    <UTooltip
+      v-for="language in languages"
+      :key="language.icon"
+      :text="language.title"
+    >
+      <UIcon
+        :name="language.icon"
+        class="text-primary shrink-0"
+        :class="language.size"
+      />
+    </UTooltip>
+  </UMarquee>
 </template>
 <script setup lang="ts">
 const languages = computed(() => [
