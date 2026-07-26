@@ -1,3 +1,5 @@
+const headerStyle = "font-serif font-extrabold";
+
 export default defineAppConfig({
   ui: {
     colors: {
@@ -22,7 +24,7 @@ export default defineAppConfig({
       close: "far:x",
       copy: "far:copy",
       copyCheck: "far:copy-check",
-      dark: "far:moon",
+      dark: "far:moon-cloud",
       drag: "far:grip-vertical",
       ellipsis: "far:ellipsis",
       error: "far:circle-x",
@@ -44,12 +46,27 @@ export default defineAppConfig({
       plus: "far:plus",
       reload: "far:rotate-ccw",
       search: "far:search",
+      star: "far:star",
       stop: "far:square",
       success: "far:circle-check",
       system: "far:monitor",
       tip: "far:lightbulb",
       upload: "far:upload",
       warning: "far:triangle-alert",
+    },
+    pageHero: {
+      slots: {
+        title: headerStyle,
+      },
+    },
+    pageSection: {
+      slots: {
+        title: headerStyle,
+      },
+    },
+    button: {
+      slots: { base: "font-semibold rounded-xl" },
+      defaultVariants: { variant: "solid" },
     },
   },
 });
