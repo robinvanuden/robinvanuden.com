@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL,
     name: process.env.NUXT_PUBLIC_SITE_NAME,
   },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
+  },
   ui: {
     theme: {
       colors: [

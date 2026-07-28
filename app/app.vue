@@ -48,22 +48,28 @@ useSeoMeta({
 </script>
 
 <style>
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
 .page-enter-active,
-.page-leave-active {
-  transition: all 0.4s;
+.layout-enter-active {
+  transition: all 0.3s ease-out;
 }
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
-}
-.layout-enter-active,
+
+.page-leave-active,
 .layout-leave-active {
-  transition: all 0.4s;
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.layout-enter-from,
+
+.page-enter-from,
+.layout-enter-from {
+  opacity: 0;
+  transform: translate(1rem, 0);
+}
+.page-leave-to,
 .layout-leave-to {
   opacity: 0;
-  filter: blur(1rem);
+  transform: translate(-3rem, 0);
 }
 </style>
