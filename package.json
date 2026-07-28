@@ -17,28 +17,29 @@
     "clean": "nuxt cleanup && nuxt prepare"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^7.2.0",
-    "@fortawesome/pro-regular-svg-icons": "^7.2.0",
-    "@fortawesome/pro-solid-svg-icons": "^7.2.0",
-    "@iconify-json/lucide": "^1.2.107",
-    "@iconify-json/simple-icons": "^1.2.82",
-    "@nuxt/content": "^3.13.0",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/pro-regular-svg-icons": "^7.3.1",
+    "@fortawesome/pro-solid-svg-icons": "^7.3.1",
+    "@iconify-json/lucide": "^1.2.117",
+    "@iconify-json/simple-icons": "^1.2.90",
+    "@nuxt/content": "^3.15.0",
     "@nuxt/image": "^2.0.0",
-    "@nuxt/ui": "^4.7.1",
-    "@nuxtjs/robots": "^6.0.8",
-    "@nuxtjs/sitemap": "^8.0.15",
-    "nuxt": "^4.4.5",
-    "tailwindcss": "^4.3.0"
+    "@nuxt/ui": "^4.10.0",
+    "@nuxtjs/robots": "^6.1.2",
+    "@nuxtjs/sitemap": "^8.2.2",
+    "nuxt": "^4.4.8",
+    "tailwindcss": "^4.3.3",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "@iconify/tools": "^5.0.11",
-    "@nuxt/eslint": "^1.15.2",
-    "@types/node": "^25.7.0",
-    "better-sqlite3": "^12.10.0",
+    "@iconify/tools": "^5.0.12",
+    "@nuxt/eslint": "^1.16.0",
+    "@types/node": "^26.1.1",
+    "better-sqlite3": "^12.11.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "prettier-plugin-tailwindcss": "^0.8.0",
+    "eslint-plugin-prettier": "^5.5.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.2.9"
+    "vue-tsc": "^3.3.7"
   }
 }
