@@ -1,9 +1,11 @@
 <template>
   <div id="about">
-    <UPageHero v-if="intro" v-bind="intro">
-      <ContentRenderer :value="intro" />
-    </UPageHero>
-    <UPageSection v-if="course" v-bind="course" orientation="horizontal" />
+    <UPageHero v-if="intro" v-bind="intro" />
+    <UPageSection v-if="course" v-bind="course">
+      <template #description>
+        <ContentRenderer :value="course" />
+      </template>
+    </UPageSection>
     <ExperienceSection />
   </div>
 </template>

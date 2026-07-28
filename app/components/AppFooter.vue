@@ -8,6 +8,14 @@
         <NuxtLink to="/" class="text-muted">Robin</NuxtLink></span
       >
     </template>
+    <template #default>
+      <UBadge
+        label="Aan deze website wordt nog gewerkt..."
+        variant="subtle"
+        color="warning"
+        icon="far:hammer-brush"
+      />
+    </template>
     <template #right>
       <UNavigationMenu :items="socials" variant="link" />
     </template>
