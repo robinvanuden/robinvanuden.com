@@ -33,17 +33,20 @@ useHead({
 useSeoMeta({
   description: "Fullstack Webdeveloper",
   ogDescription: "Fullstack Webdeveloper",
-  ogImage: () => ({
-    url: img("/robin.jpeg", {
-      width: 800,
-      height: 800,
-      fit: "cover",
-    }),
+  ogImage: {
+    url: img("/img/hands.jpg", { width: 600, height: 315 }),
+    alt: name.value,
+    type: "image/jpeg",
+    width: 600,
+    height: 315,
+  },
+  twitterImage: {
+    url: img("/img/robin.jpg", { width: 800, height: 800 }),
     alt: name.value,
     type: "image/jpeg",
     width: 800,
     height: 800,
-  }),
+  },
 });
 </script>
 

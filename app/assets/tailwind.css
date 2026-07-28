@@ -2,7 +2,8 @@
 @import "@nuxt/ui";
 
 @theme static {
-    --font-sans: "Baloo 2", sans-serif;
+    --font-serif: "Source Serif 4", sans-serif;
+    --font-sans: "Bpmf Huninn", sans-serif;
 
     --color-old-gold-50: #fbf7ea;
     --color-old-gold-100: #f7efd4;
@@ -59,25 +60,31 @@
 
 @layer base {
     html {
-        font-size: 17px
+        font-weight: 300;
     }
 
-    p b, p strong {
-        @apply text-toned;
+    p {
+        b, strong {
+            @apply text-default font-extrabold;
+        }
 
         a {
-            @apply text-primary underline;
+            @apply text-primary underline font-extrabold;
         }
     }
 }
 
 @layer components {
-    span[class^='iconify i-fas:'],
-    span[class^='iconify i-far:'] {
-        @apply mask-center mask-size-[86%_86%]
+    .iconify {
+        @apply mask-center mask-size-[84%_84%]
     }
 
     .box {
         @apply bg-accented dark:bg-elevated rounded-lg p-4;
+    }
+
+    .rounded-squircle {
+        border-radius: 10rem;
+        corner-shape: squircle;
     }
 }
