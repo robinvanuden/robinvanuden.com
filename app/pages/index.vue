@@ -14,7 +14,8 @@
         <ContentRenderer v-if="intro" :value="intro" :prose="false" />
       </template>
       <NuxtImg
-        src="/img/hands.jpg"
+        src="/img/graduation.jpg"
+        alt="Afgestudeerd"
         class="rounded-squircle"
         width="500"
         quality="80"
