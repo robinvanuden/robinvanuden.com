@@ -1,74 +1,71 @@
-import tailwindcss from "@tailwindcss/vite";
+import { defineIcons } from "./icons/font-awesome";
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    "@nuxt/ui",
     "@nuxt/content",
     "@nuxt/eslint",
-    "@nuxt/fonts",
     "@nuxt/image",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
-    "@nuxtjs/i18n",
   ],
+  css: ["~/assets/tailwind.css"],
   site: {
     indexable: true,
     url: process.env.NUXT_PUBLIC_SITE_URL,
     name: process.env.NUXT_PUBLIC_SITE_NAME,
   },
-  runtimeConfig: {
-    public: {
-      url: process.env.NUXT_PUBLIC_SITE_URL,
-      name: process.env.NUXT_PUBLIC_SITE_NAME,
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
+  },
+  ui: {
+    theme: {
+      colors: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "info",
+        "success",
+        "warning",
+        "error",
+      ],
     },
   },
-  css: ["~/assets/tailwind.css"],
+  runtimeConfig: {
+    public: {
+      site: {
+        url: "",
+        name: "",
+        email: "",
+      },
+      socials: {
+        github: "",
+        instagram: "",
+        linkedin: "",
+        letterboxd: "",
+        pinterest: "",
+      },
+    },
+  },
   fonts: {
     families: [
       {
-        name: "Jost",
+        name: "Baloo 2",
         weights: [400, 500, 600, 700],
         styles: ["normal", "italic"],
       },
     ],
   },
-  i18n: {
-    defaultLocale: "nl",
-    strategy: "prefix",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "rvu-locale",
-      alwaysRedirect: true,
-      fallbackLocale: "nl",
-    },
-    locales: [
-      {
-        code: "nl",
-        iso: "nl-NL",
-        name: "Nederlands",
-        file: "nl.json",
-      },
-    ],
-  },
-  app: {
-    head: {
-      link: [
-        {
-          rel: "icon",
-          type: "image/x-icon",
-          href: "/favicon.ico",
-        },
-      ],
+  icon: {
+    customCollections: defineIcons(),
+    provider: "server",
+    serverBundle: {
+      collections: ["fas", "far", "fab", "lucide", "simple-icons"],
     },
   },
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   ssr: true,
-  vite: {
-    plugins: [tailwindcss()],
-  },
-  typescript: {
-    strict: true,
-    typeCheck: true,
-  },
+  typescript: { strict: true, typeCheck: true },
 });

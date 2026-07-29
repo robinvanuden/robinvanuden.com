@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+    --font-serif: "Source Serif 4", sans-serif;
+    --font-sans: "Bpmf Huninn", sans-serif;
+
+    --color-old-gold-50: #fbf7ea;
+    --color-old-gold-100: #f7efd4;
+    --color-old-gold-200: #efdea9;
+    --color-old-gold-300: #e7ce7e;
+    --color-old-gold-400: #debe51;
+    --color-old-gold-500: #d6ae29;
+    --color-old-gold-600: #ab8b21;
+    --color-old-gold-700: #816818;
+    --color-old-gold-800: #564510;
+    --color-old-gold-900: #2b2308;
+    --color-old-gold-950: #1e1806;
+
+    --color-dusty-olive-50: #f2f5f0;
+    --color-dusty-olive-100: #e5eae1;
+    --color-dusty-olive-200: #cad5c3;
+    --color-dusty-olive-300: #b0c0a5;
+    --color-dusty-olive-400: #95ab87;
+    --color-dusty-olive-500: #7b9669;
+    --color-dusty-olive-600: #627854;
+    --color-dusty-olive-700: #4a5a3f;
+    --color-dusty-olive-800: #313c2a;
+    --color-dusty-olive-900: #191e15;
+    --color-dusty-olive-950: #11150f;
+
+    --color-vintage-lavender-50: #f2f0f5;
+    --color-vintage-lavender-100: #e5e0eb;
+    --color-vintage-lavender-200: #cbc2d6;
+    --color-vintage-lavender-300: #b1a3c2;
+    --color-vintage-lavender-400: #9885ad;
+    --color-vintage-lavender-500: #7e6699;
+    --color-vintage-lavender-600: #65527a;
+    --color-vintage-lavender-700: #4b3d5c;
+    --color-vintage-lavender-800: #32293d;
+    --color-vintage-lavender-900: #19141f;
+    --color-vintage-lavender-950: #120e15;
+
+    --color-grey-olive-50: #f3f3f2;
+    --color-grey-olive-100: #e7e6e4;
+    --color-grey-olive-200: #cfcec9;
+    --color-grey-olive-300: #b6b5af;
+    --color-grey-olive-400: #9e9d94;
+    --color-grey-olive-500: #868479;
+    --color-grey-olive-600: #6b6a61;
+    --color-grey-olive-700: #504f49;
+    --color-grey-olive-800: #363530;
+    --color-grey-olive-900: #1b1a18;
+    --color-grey-olive-950: #131211;
+}
+
+:root {
+    --ui-container: 65rem;
+}
+
+@layer base {
+    html {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    p {
+        b, strong {
+            @apply text-default font-extrabold;
+        }
+
+        a {
+            @apply text-primary underline font-extrabold;
+        }
+    }
+}
+
+@layer components {
+    .iconify {
+        @apply mask-center mask-size-[84%_84%]
+    }
+
+    .box {
+        @apply bg-accented dark:bg-elevated rounded-lg p-4;
+    }
+
+    .rounded-squircle {
+        border-radius: 10rem;
+        corner-shape: squircle;
+    }
+}

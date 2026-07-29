@@ -1,6 +1,6 @@
 {
   "name": "www.robinvanuden.com",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "author": {
@@ -14,24 +14,32 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "clean": "nuxt cleanup"
+    "clean": "nuxt cleanup && nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.6.3",
-    "@nuxt/eslint": "^1.9.0",
-    "@nuxt/fonts": "^0.11.4",
-    "@nuxt/image": "^1.11.0",
-    "@nuxtjs/i18n": "^10.1.0",
-    "@nuxtjs/robots": "^5.5.1",
-    "@nuxtjs/sitemap": "^7.4.3",
-    "@tailwindcss/vite": "^4.1.13",
-    "eslint": "^9.35.0",
-    "nuxt": "^4.1.1",
-    "tailwindcss": "^4.1.13"
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/pro-regular-svg-icons": "^7.3.1",
+    "@fortawesome/pro-solid-svg-icons": "^7.3.1",
+    "@iconify-json/lucide": "^1.2.117",
+    "@iconify-json/simple-icons": "^1.2.90",
+    "@nuxt/content": "^3.15.0",
+    "@nuxt/image": "^2.0.0",
+    "@nuxt/ui": "^4.10.0",
+    "@nuxtjs/robots": "^6.1.2",
+    "@nuxtjs/sitemap": "^8.2.2",
+    "nuxt": "^4.4.8",
+    "tailwindcss": "^4.3.3",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
+    "@iconify/tools": "^5.0.12",
+    "@nuxt/eslint": "^1.16.0",
+    "@types/node": "^26.1.1",
+    "better-sqlite3": "^12.11.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
-    "vue-tsc": "^3.0.6"
+    "eslint-plugin-prettier": "^5.5.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.7"
   }
 }
