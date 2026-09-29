@@ -4,17 +4,8 @@
       <span class="inline-flex items-center gap-1"
         >Gebouwd met
         <UIcon name="fas:stroopwafel" class="text-old-gold-500" /> &
-        <UIcon name="fas:heart" class="text-red-500" /> door
-        <NuxtLink to="/" class="text-muted">Robin</NuxtLink></span
-      >
-    </template>
-    <template #default>
-      <UBadge
-        label="Aan deze website wordt nog gewerkt..."
-        variant="subtle"
-        color="warning"
-        icon="far:hammer-brush"
-      />
+        <UIcon name="fas:heart" class="text-red-500"
+      /></span>
     </template>
     <template #right>
       <UNavigationMenu :items="socials" variant="link" />
