@@ -56,12 +56,16 @@
 
 :root {
     --ui-container: 65rem;
+    --ui-radius: .625rem;
 }
 
 @layer base {
     html {
-        font-size: 17px;
         font-weight: 300;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-serif font-extrabold;
     }
 
     p {

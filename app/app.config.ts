@@ -1,5 +1,3 @@
-const headerStyle = "font-serif font-extrabold";
-
 export default defineAppConfig({
   ui: {
     colors: {
@@ -54,18 +52,8 @@ export default defineAppConfig({
       upload: "far:upload",
       warning: "far:triangle-alert",
     },
-    pageHero: {
-      slots: {
-        title: headerStyle,
-      },
-    },
-    pageSection: {
-      slots: {
-        title: headerStyle,
-      },
-    },
     button: {
-      slots: { base: "font-semibold rounded-xl" },
+      slots: { base: "font-semibold" },
       defaultVariants: { variant: "solid" },
     },
   },
