@@ -7,7 +7,7 @@
       <template #description>
         <ContentRenderer v-if="hero" :value="hero" :prose="false" />
       </template>
-      <BackgroundCubes />
+      <LazyBackgroundShapes />
     </UPageHero>
     <UPageSection v-if="intro" v-bind="intro" orientation="horizontal">
       <template #description>
