@@ -1,6 +1,5 @@
 import { blankIconSet } from "@iconify/tools";
 import { fas } from "@fortawesome/pro-solid-svg-icons";
-import { far } from "@fortawesome/pro-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
 import type { IconifyInfo } from "@iconify/types";
@@ -8,7 +7,6 @@ import type { IconifyInfo } from "@iconify/types";
 // put the icons and the prefix you want them to have together in one object.
 const icons = [
   { icons: fas, prefix: "fas" },
-  { icons: far, prefix: "far" },
   { icons: fab, prefix: "fab" },
 ];
 

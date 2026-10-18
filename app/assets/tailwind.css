@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-    --font-serif: "Source Serif 4", sans-serif;
+    --font-serif: "Petrona", sans-serif;
     --font-sans: "Bpmf Huninn", sans-serif;
 
     --color-old-gold-50: #fbf7ea;
@@ -69,12 +69,13 @@
     }
 
     p {
+        @apply mt-4;
         b, strong {
-            @apply text-default font-extrabold;
+            @apply text-default font-bold;
         }
 
         a {
-            @apply text-primary underline font-extrabold;
+            @apply text-primary underline font-medium;
         }
     }
 }

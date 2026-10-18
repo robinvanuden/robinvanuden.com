@@ -1,4 +1,4 @@
-import { defineIcons } from "./icons/font-awesome";
+import { defineIcons } from "./font-awesome.ts";
 
 export default defineNuxtConfig({
   modules: [
@@ -12,8 +12,6 @@ export default defineNuxtConfig({
   css: ["~/assets/tailwind.css"],
   site: {
     indexable: true,
-    url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: process.env.NUXT_PUBLIC_SITE_NAME,
   },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
@@ -51,8 +49,13 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: "Baloo 2",
-        weights: [400, 500, 600, 700],
+        name: "Petrona",
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        styles: ["normal", "italic"],
+      },
+      {
+        name: "Poppins",
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
         styles: ["normal", "italic"],
       },
     ],
